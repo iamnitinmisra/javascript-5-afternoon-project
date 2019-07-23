@@ -15,7 +15,10 @@
 */
 
 // Code here
-
+function CarFactory(make, model){
+  this.make = make;
+  this.model = model;
+}
 ////////// PROBLEM 2 //////////
 
 // Do not edit the code below.
@@ -34,7 +37,7 @@ function Employee(name, email, hireDate) {
 */
 
 // Code here
-
+var bob = new Employee('Bob', 'bob@gmail.com', '01-02-98')
 ////////// PROBLEM 3 //////////
 
 // Do not edit the code below.
@@ -57,6 +60,17 @@ mustang.moveCar(); // Increments mustang' move property by 10. Returns the new m
 */
 
 // Code here
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+  this.move = 0
+
+  this.moveCar = function(){
+    this.move += 10
+  }
+}
+
 
 ////////// PROBLEM 4 //////////
 
@@ -76,6 +90,9 @@ function Movie(name, genre, rating) {
 }
 
 // Code here
+this.newRating = function(updatedRating){
+  this.rating = (this.rating + updatedRating) / 2
+}
 
 ////////// PROBLEM 5 //////////
 
